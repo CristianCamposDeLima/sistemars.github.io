@@ -1,2 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRANET DEA</title>
+<style>
+    body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaa;
+    background-image: url("assets/fundo/caff2.png");
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+/*     overflow: hidden;   desativa scroll*/
+
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0 0 0 ;
+    background-attachment: fixed;
+}
+.container-clock-calendar {
+display: flex;
+flex-direction: row;
+align-items: end;
+}
+.clock {
+margin-top: 15px;
+font-size: 40px;
+text-shadow: 1px 3px 10px #333;
+}
+
+.wd-dd-mm {
+display:flex;
+flex-direction: row;
+margin: 2px;
+font-size: 16px;
+}
+.container-tabs {
+    display: flex;
+    width: 82%;
+    max-width: 1000px;
+}
+div#week-day {
+text-transform: Captalize;
+padding:5px 5px 5px 5px;
+}
+div#day {
+padding:5px 0 5px 0;
+}
+div#month {
+padding:5px 0 5px 5px;
+}
+.container {
+    align-items: center;
+    justify-content: center;
+    background-color: #0000000f; 
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+}
+
+div.tabbed {
+    position: relative;
+    width: 82%;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000000f; 
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+/*     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.582); */
+    border-left: 1px solid rgba(246, 255, 229, 0.493);
+    border-bottom: 1px solid rgba(246, 255, 229, 0.493);
+    border-right: 1px solid rgba(246, 255, 229, 0.493);
+    border-top: 1PX SOLID rgba(246, 255, 229, 0.493);
+    border-radius: 0 0.8em 0.8em 0.8em;
+}
+
+nav.tabs {
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    display: block;
+    align-self: flex-start;	    
+}
+/*
+div.tab:target {
+    display: block;
+} 
+div.tab {
+    display: none;
+} */
+
+ul {
+    background-color: rgba(255, 255, 255, 0.150 );
+    border-radius: 0.8em 0.8em 0 0;
+    border: 1px solid rgba(246, 255, 229, 0.493);
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+li  {
+    margin-right: 2.5px;
+    position: relative;
+    float: left;
+    padding: 5px 5px 3px 5px;
+    list-style: none;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+    border-radius: 08px 08px 0px 0px;
+}
+li:nth-child(3) {
+
+    margin-right: 0;
+}
+ 
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+    border-top: 2px solid rgb(27, 230, 8);
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+/* li:active {
+    background-color: rgba(255, 255, 255, 0.315);
+    border-top: 2px solid rgb(27, 230, 8);
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+} */
+
+h1 {
+        font-size: 17px;
+        text-shadow: 1px 1px 3px rgb(7, 7, 7);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer {
+        display: flex;   
+        align-items: end;  
+        text-align: center;
+        justify-content: center;
+        height: 20px;
+        margin: 20px 0 10px 0;
+        position: unset;
+    }
+    .click-box {
+        display: flex;
+        flex-direction: row;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        height: 50px;
+        width: 130px;
+        background-color: rgba(226, 226, 226, 0.747);
+        padding: 10px;
+        border-radius: 0.8em;
+        box-shadow: 1px 1px 20px #00000025;
+        border: 1px solid transparent;
+        cursor:pointer;
+        backdrop-filter: blur(5px);
+        background-color: rgb(255 255 255 / 18%); 
+    }
+    .click-box:hover{
+        background-color: rgba(247, 247, 247, 0.74);
+        box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.932);
+        /* margin-top: 3px; */
+        transform: scale(1.03);
+        transition: .1s;
+    }
+    .section-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+	  Background-color: #0000000f;
+    }
+    .section-boxes a { 
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 800;
+        text-shadow: 2px 3px 5px rgb(0, 0, 0);
+    }
+    footer a {
+        color: white;
+        text-decoration: none;  
+        bottom:3px;
+        font-size: 12px;
+        text-shadow: 1px 1px 3px rgb(7, 7, 7);
+    }
+    img {
+        width: 55px;
+        opacity: 80%;
+        margin-right: 10px;
+    }
+   
+/*  o seletor abaixo seleciona a seção na ordem "3" */
+  /*   section:nth-child(3) {
+  background-color: lime;
+}
+ */
+ 
+   /*  o seletor abaixo seleciona a seção na ordem de "3" em "3" */
+   /*  section:nth-child(3n) {
+  border:2px solid tomato;
+} 
+ */
+ li a {
+     color: white;
+     text-decoration: none;
+ }
+h1 {
+font-size: 15px;
+}
+</style>
+<script defer>
+setInterval ( ()=> {
+const clock = document.querySelector('div#clock')
+
+let data = new Date()
+let hora = data.getHours()
+let minutos = data.getMinutes()
+hora = hora <= 9 ? '0' + hora : hora
+minutos = minutos <= 9 ? '0' + minutos : minutos
+clock.innerHTML = `${hora}:${minutos}`
+
+const weekDay = document.querySelector('div#week-day')
+let diadasemana = data.getDay()
+diadasemana= diadasemana == 0 ? "Dom" : diadasemana
+diadasemana= diadasemana == 1 ? "Seg" : diadasemana
+diadasemana= diadasemana == 2 ? "Ter" : diadasemana
+diadasemana= diadasemana == 3 ? "Qua" : diadasemana
+diadasemana= diadasemana == 4 ? "Qui" : diadasemana
+diadasemana= diadasemana == 5 ? "Sex" : diadasemana
+diadasemana= diadasemana == 6 ? "Sab" : diadasemana
+weekDay.innerHTML = `${diadasemana},`
+
+const day = document.querySelector('div#day')
+let dia = data.getDate()
+day.innerHTML = `${dia}  de`
+
+const month = document.querySelector('div#month')
+let mes = data.getMonth()
+mes = mes == 0 ? "janeiro" : mes
+mes = mes == 1 ? "fevereiro" : mes
+mes = mes == 2 ? "março" : mes
+mes = mes == 3 ? "abril" : mes
+mes = mes == 4 ? "maio" : mes
+mes = mes == 5 ? "junho" : mes
+mes = mes == 6 ? "julho" : mes
+mes = mes == 7 ? "agosto" : mes
+mes = mes == 8 ? "setembro" : mes
+mes = mes == 9 ? "outubro" : mes
+mes = mes == 10 ? "novembro" : mes
+mes = mes == 11 ? "dezembro" : mes
+month.innerHTML = `${mes}`
+})
+</script>
+
+</head>
+<body>
+    <a target="_blank" href="https://cultura.rs.gov.br/inicial">
+        <img src="assets/icones/logo_sedac_h.png" alt="" style="width: 260px; background-color: rgba(255, 255, 255, 0.308); border-radius: 0.8em; padding-right: 3px;">
+    </a>
+<div class="container-clock-calendar">
+<div class="clock" id="clock">Hora</div>
+<div class="wd-dd-mm">
+<div class="week-day" id="week-day">dia da semana</div>
+<div class="day" id="day">dia</div>
+<div class="month" id="month">mes</div>
+</div>
+</div>
+    <div class="container-tabs">
+
+        <nav class="tabs">
+            <ul>
+                <li id="acesso-rapido">
+                    <a href="#acesso-rapido">ACESSO RÁPIDO</a>
+                </li>
+                <li id="drh">
+                    
+                    DRH
+                </li>
+                <li id="legis">Legis</li>
+            </ul>
+        </div>
+        </nav>     
+        <div class="tabbed">
+            <H1>ACESSO RÁPIDO - DEPARTAMENTO ADMINISTRATIVO</H1>
+        <div class="tab" id="acesso-rapido"> 
+            <section class="section-boxes">  
+                <a target="_blank" href="https://secweb.procergs.com.br/doe/public/downloadDiario/diario-download-list.xhtml">
+                    <div class="click-box">
+                        <img src="assets/icones/doe rs logo.png" alt="" >
+                        DOE
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://secweb.procergs.com.br/pra-aj4/">
+                    <div class="click-box">
+                        <img src="assets/icones/logo proa.png" alt="">
+                        PROA    
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://secweb.procergs.com.br/pdi/logon.xhtml">
+                    <div class="click-box">
+                        <img src="assets/icones/pdi logo.png" alt="">
+                        PDI
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.cieers.org.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/CIEE LOGO.png" alt="">
+                        CIEE RS
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.ifrhe.rs.gov.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/Logo_IF-RHE.png" alt="">
+                        IF-RHE
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://secweb.procergs.com.br/sgm/Interface/Html/PRSoeLogon.jsp">
+                    <div class="click-box">
+                        <img src="assets/icones/logo sgm.png" alt="">
+                        SGM
+                    </div>   
+                </a>
+                <a target="_blank" href="https://secweb.procergs.com.br/rheportal/logon.xhtml">
+                    <div class="click-box">
+                        <img src="assets/icones/PORTAL RHE.png" alt="">
+                        PORTAL RHE
+                    </div>
+                </a>
+                <a target="_blank" href="https://gestaodepessoas.rs.gov.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/Brasão_do_Rio_Grande_do_Sul.svg.png" alt="" style="width: 45px;">
+                        PORTAL SUGEP        
+                    </div>
+                </a>
+                <a target="_blank" href="https://ape.intra.rs.gov.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/logo APE.png" alt="">
+                        APE  
+                    </div>
+                </a>
+                <a target="_blank" href="https://fpe.intra.rs.gov.br/apl/fpe/default.aspx">
+                    <div class="click-box">
+                        <img src="assets/icones/fpe logo.png" alt="">
+                        FPE
+                    </div>
+                </a>
+                <a target="_blank" href="https://gce.intra.rs.gov.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/logo gce.png" alt="">
+                        GCE
+                    </div>
+                </a>
+                <a target="_blank" href="http://www.celic.rs.gov.br/">
+                    <div class="click-box">
+                        <img src="assets/icones/celic logo.png" alt="">
+                        CELIC
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://spg.rs.gov.br/Soe/Logon?ReturnUrl=%2F">
+                    <div class="click-box">
+                        <img src="assets/icones/logo SPO.png" alt="">
+                        SPO
+                    </div>
+                </a>
+                <a target="_blank" href="http://www.procultura.rs.gov.br/edita_produtor_situacao.php">
+                    <div class="click-box">
+                        <img src="assets/icones/logo PROCULTURA.png" alt="">
+                        PRO CULTURA
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.sme.rs.gov.br/sme/login.php">
+                <div class="click-box">
+                    <img src="assets/icones/logo SME.png" alt="">
+                    SME
+                </div>
+            </a>
+            <a target="_blank" href="https://www.office.com/">
+                <div class="click-box">
+                    <img src="assets/icones/Office.ico" alt="">
+                    OFFICE 365
+                </div>
+            </a>
+            <a target="_blank" href="https://www.office.com/?auth=2">
+                <div class="click-box">
+                    <img src="assets/icones/outlook icon.webp" alt="">
+                    OUTLOOK
+                </div>
+            </a>
+            <a target="_blank" href="https://mail.google.com/mail/?tab=im&authuser=0">
+                <div class="click-box">
+                    <img src="assets/icones/gmail icon.png" alt="">
+                    GMAIL
+                </div>
+            </a>
+            <a target="_blank" href="https://web.whatsapp.com/">
+                <div class="click-box">
+                    <img src="assets/icones/WhatsApp.svg.webp" alt="" style="width: 60px"> Whatsapp Web
+                </div>
+            </a>
+            <a target="_blank" href="https://www.google.com.br">
+                <div class="click-box">
+                    <img src="assets/icones/Google_Chrome_icon_(September_2014).svg.png" alt="">
+                    GOOGLE
+                </div>
+                </a>
+            </section>
+        </div>
+    </div>
+</div> 
+</body>
+<footer><a target="_blank" href="https://www.linkedin.com/in/cristian-campos-de-lima-76ba4a164/">&copy Cristian Lima</a></footer>
+</html>
+
 # sistemars.github.io
 Página em construção para ajudar na acessibilidade e produtividade dos servidores públicos do RS
