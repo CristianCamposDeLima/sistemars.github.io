@@ -37,7 +37,7 @@ function getNewPosition(column, posY) {
 
 //=================================================================
 
-const columns = document.querySelectorAll(".section-boxes");
+const columns = document.querySelectorAll(".column");
 
 // Função para salvar o estado das colunas
 function saveColumnState() {
