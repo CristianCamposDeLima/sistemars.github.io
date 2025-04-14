@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA RS - Servidores</title>
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script defer src="scripts/clock.js"></script>
+    <script defer src="scripts/dragging.js"></script>
+    <script defer src="scripts/calculator-ipe.js"></script>
+
+</head>
+<body>
+    <a target="_blank" href="https://estado.rs.gov.br/inicial">
+        <img draggable="false" src="assets/icons/brasao_gov_rs.png" alt="" style="width: 260px; background-color: rgba(255, 255, 255, 0.308); border-radius: 0.8em; padding-right: 3px;">
+    </a>
+<div class="container-clock-calendar">
+<div class="clock" id="clock">Hora</div>
+<div class="wd-dd-mm">
+<div class="week-day" id="week-day">dia da semana</div>
+<div class="day" id="day">dia</div>
+<div class="month" id="month">mes</div>
+</div>
+</div>
+<div class="tabbed">
+    <div class="container-tabs">
+
+        <nav class="tabs">
+            <button class="btn-acess" onclick="window.location.href='servidores.html'">
+                <h1>Área dos servidores</h1>
+            </button>
+            <button class="btn-acess" onclick="window.location.href='index.html'">
+                <h1>ACESSO RÁPIDO - SISTEMAS</h1>
+            </button>
+            <button class="btn-acess" onclick="window.location.href='estagiarios.html'">
+                <h1>Área dos estagiários</h1>
+            </button>
+        </nav>    
+    </div>
+        <div class="tab" id="acesso-rapido"> 
+            <section class="section-boxes">
+                <a target="_blank" href="https://www.cieers.org.br/">
+                    <div class="click-box">
+                        <img draggable="false" src="assets/icons/CIEE LOGO.png" alt="">
+                        CIEE RS
+                    </div>
+                </a>
+                    <a target="_blank" href="https://outlook.office.com/mail/">
+                        <div class="click-box">
+                            <img draggable="false" src="assets/icons/outlook icon.webp" alt="">
+                            OUTLOOK
+                        </div>
+                    </a>
+                </a>
+            <a target="_blank" href="https://teams.microsoft.com/">
+                <div class="click-box">
+                    <img draggable="false" src="assets/icons/teams-icon.png" alt="">
+                    TEAMS
+                </div>
+            </a>
+
+        </div>
+        </section>
+	</div>	
+	</div>	
+<section>
+<div class="container-simulators" >
+    <div class="contain-simulator">
+        <h4 class="title-simulator">Simulador de pagamento de <br> Estagiários</h4>
+        <div class="display">
+            <label for="result">Resultado:</label>
+            <div name="result" class="result"></div>
+        </div>
+        <label for="salario">*Carga horária semanal:</label>
+        <br>
+	  
+        <input type="number" step="000.01" name="salario" placeholder="Digite sua carga horária semanal (Ex: 30)" class="salario"></input type="number">
+	
+        <label for="idade">*Total de dias trabalhados:</label>
+	<br>
+     
+        <input type="number" name="idade" class="idade" placeholder="Qualtos dias trabalhou?"></input type="number">
+        
+	
+        <!--    <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+        <button>,</button>
+        <button>◁</button> -->
+        <button id="calcular" onclick="calcular()">Calcular</button>
+    </div>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et repellendus perspiciatis amet aut doloribus iste eligendi laudantium modi aliquam odit, explicabo, cupiditate voluptatum, consequuntur eius earum laboriosam laborum? Perspiciatis, sapiente..</p>
+	<br> 
+	<p>Tecle "Ctrl+D" para salvar a página aos favoritos.</p>
+	<br>
+	<p>Em manutenção...</p>
+    
+</div>
+	
+</body>
+<footer><a target="_blank" href="https://www.linkedin.com/in/cristian-campos-de-lima-76ba4a164/">Utilidade pública - Por: Cristian Lima</a></footer>
+</html>
