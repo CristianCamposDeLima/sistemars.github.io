@@ -74,30 +74,181 @@
                         TEAMS
                     </div>
                 </a>
-
-        </div>
+                
+            </div>
         </section>
 	</div>	
-	</div>	
+</div>	
 <section>
-<div class="container-simulators">
-    <div class="contain-simulator">
-        <h4 class="title-simulator">Simulador de contribuição <br> IPE-Saúde</h4>
-        <div class="display">
-            <label for="result">Sua contribuição será:</label>
-            <div name="result" class="result"></div>
+    <div>
+        <section id="area-servidores" class="tab-content hidden">
+            <div class="container-simulators">
+            <h2>Área do Servidor - Informações Úteis</h2>
+            <div class="tabs-nav">
+              <button class="tab-btn active" data-tab="portal-rhe">Portal do Servidor RHE</button>
+              <button class="tab-btn" data-tab="ipe-saude">IPE Saúde</button>
+              <button class="tab-btn" data-tab="if-rhe">IF-RHE</button>
+              <button class="tab-btn" data-tab="ponto-digital">Ponto Digital</button>
+            </div>
+          
+            <div class="tab-section active" id="portal-rhe">
+              <div class="card">
+                <h3>📌 Portal do Servidor RHE</h3>
+                <p><strong>O que é:</strong> Sistema central de gestão funcional dos servidores estaduais.</p>
+                <p><strong>Acesso:</strong> <a href="https://www.portaldoservidor.rs.gov.br" target="_blank">portalservidor.rs.gov.br</a></p>
+                <ul>
+                    <p><strong>Utilidades:</strong></p>
+                    <li>Contracheque mensal</li>
+                    <li>Comprovante de rendimentos</li>
+                    <li>Dados funcionais</li>
+                  <li>Férias, licenças e histórico funcional</li>
+                  <li>Declaração de rendimentos para Imposto de Renda</li>
+                  <p><strong>Como acessar:</strong> Identificação Funcional e senha. (<a href="https://www.gov.br/" target="_blank">gov.br</a>)</p>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="tab-section" id="ipe-saude">
+              <div class="card">
+                <h3>💊 IPE Saúde</h3>
+                <p><strong>O que é:</strong> Plano de assistência à saúde dos servidores públicos do Estado.</p>
+                <p><strong>Acesso:</strong> <a href="https://www.ipesaude.rs.gov.br" target="_blank">ipesaude.rs.gov.br</a></p>
+                <ul>
+                  <p><strong>Importante:</strong>
+                  <li>O plano é ativado após o primeiro desconto em folha de pagamento</li>
+                  <li>É necessário solicitar o cartão do plano na página "habilitação de segurado" do site do IPE Saúde.</li>
+                  <li>Para desenteressados em manter o plano, o prazo de cancelamento corresponde a 15 dias após o primeiro desconto.</li>
+                  <p><strong>Utilidades:</strong></p>
+                  <li>Guias para consulta e exames</li>
+                  <li>Rede credenciada de hospitais e profissionais</li>
+                  <li>Extrato de utilização</li>
+                  <li>Carteira digital do IPE</li>
+                  <p><strong>Como acessar:</strong> CPF e senha do gov.br.</p>
+                </ul>
+            </div>
+        </div>
+        
+            <div class="tab-section" id="if-rhe">
+              <div class="card">
+                <h3>📎 IF-RHE (Informações Funcionais - RHE)</h3>
+                <p><strong>O que é:</strong> Plataforma para consulta e atualização de dados funcionais.</p>
+                <p><strong>Acesso:</strong> <a href="https://ifrhe.rs.gov.br" target="_blank">ifrhe.rs.gov.br</a></p>
+                <ul>
+                <p><strong>Utilidades:</strong></p>
+                  <li>Atualização de endereço e contato</li>
+                  <li>Consulta de histórico funcional</li>
+                  <li>Dados de lotação e cargo</li>
+                  <p><strong>Como acessar:</strong> CPF e senha gov.br</p>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="tab-section" id="ponto-digital">
+              <div class="card">
+                <h3>⏱️ Ponto Digital</h3>
+                <p><strong>O que é:</strong> Sistema de registro eletrônico de ponto para servidores do Estado.</p>
+                <p><strong>Acesso:</strong> <a href="https://pontodigital.rs.gov.br" target="_blank">pontodigital.rs.gov.br</a></p>
+                <ul>
+                   <p><strong>Utilidades:</strong></p>
+                  <li>Registro de entrada e saída de expediente</li>
+                  <li>Consulta de marcações de ponto</li>
+                  <li>Solicitação de ajustes de marcações</li>
+                  <p><strong>Como acessar:</strong> Identificação Funcional e senha ou por biometria em equipamentos autorizados pelo órgão.</p>
+                </ul>
+                </div>
+            </div>
+          
+            <div class="card">
+              <h3>ℹ️ Dicas Rápidas</h3>
+              <ul>
+                <li>Mantenha seus dados atualizados no IF-RHE.</li>
+                <li>Use o ponto digital diariamente, conforme as orientações do seu setor.</li>
+                <li>Guarde seus acessos com segurança (CPF + senha Gov.br).</li>
+                <li>Em caso de dúvidas, entre em contato com o RH da sua secretaria.</li>
+              </ul>
+            </div>
+            
+            <script>
+                const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabSections = document.querySelectorAll('.tab-section');
+          
+            tabButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                const target = button.dataset.tab;
+          
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+          
+                tabSections.forEach(section => {
+                  section.classList.remove('active');
+                  if (section.id === target) {
+                    section.classList.add('active');
+                  }
+                });
+            });
+            });
+            </script>
+          
+          <style>
+            .tabs-nav {
+                display: flex;
+              gap: 0.5rem;
+              margin-bottom: 1rem;
+              flex-wrap: wrap;
+            }
+          
+            .tab-btn {
+              background: #eee;
+              border: none;
+              padding: 0.5rem 1rem;
+              cursor: pointer;
+              border-radius: 4px;
+              font-weight: bold;    width: auto;
+            }
+          
+            .tab-btn.active {
+                background: #005aa7;
+                color: white;
+            }
+          
+            .tab-section {
+              display: none;
+            }
+          
+            .tab-section.active {
+              display: block;
+              animation: slideIn 0.4s ease;
+            }
+          
+            @keyframes slideIn {
+              from {
+                opacity: 0;
+                transform: translateX(-20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            }
+          </style>
+          
+          <div class="contain-simulator">
+              <h4 class="title-simulator">Simulador de contribuição <br> IPE-Saúde</h4>
+              <div class="display">
+                  <label for="result">Sua contribuição será:</label>
+                  <div name="result" class="result"></div>
         </div>
         <label for="salario">*Salário base:</label>
         <br>
 	  
         <input type="number" step="000.01" name="salario" placeholder="Digite o salário (Ex: 1200,00)" class="salario"></input type="number">
-	
+        
         <label for="idade">*Idade:</label>
-	<br>
-     
+        <br>
+        
         <input type="number" name="idade" class="idade" placeholder="Digite sua idade (Ex: 18)"></input type="number">
         
-	
+        
         <!--    <button>1</button>
         <button>2</button>
         <button>3</button>
@@ -119,6 +270,8 @@
 	<p>Em manutenção...</p>
     
 </div>
+</div>
+</section>
 	
 </body>
 <footer><a target="_blank" href="https://www.linkedin.com/in/cristian-campos-de-lima-76ba4a164/">Utilidade pública - Por: Cristian Lima</a></footer>
