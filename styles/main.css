@@ -352,12 +352,14 @@ div.container-simulators{
         text-shadow: none;
     }
     .btn-acess:hover {
-        background-color: #837575;
+        bbackground-color: rgb(63, 132, 196);
+    	background-image: linear-gradient(to bottom, #08c, #04c);
         color: white;
         border-radius: 5px;
     }
 
     .btn-acess.active {
-        background-color: #837575;
+        background-color: rgb(63, 132, 196);
+    	background-image: linear-gradient(to bottom, #08c, #04c);
         color: white;
         border-radius: 5px;}
