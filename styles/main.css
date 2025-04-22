@@ -19,35 +19,18 @@ body{
     padding: 10px 0 0 0 ;
     background-attachment: fixed;
 }
-.container-clock-calendar {
-display: flex;
-flex-direction: row;
-align-items: end;
-margin: 20px 0 20px 0;
-}
-.clock {
-margin-top: 15px;
-font-size: 42px;
-text-shadow: 1px 3px 10px #333;
-}
-
-.wd-dd-mm {
-display:flex;
-flex-direction: row;
-margin: 2px;
-font-size: 18px;
-}
-.container-tabs {
-    display: flex;
-    max-width: 1000px;
-    align-content: center;
-    justify-content: center;
-}
 nav  {
+    width: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #dfdfdf56;
-    padding-bottom: 10px;
+    align-items: center;
+    background-color: #ffffffd3;
+    color: #000;
+    backdrop-filter: blur(30px);
+    height: 48px;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    justify-content: center;	    
 }
 nav>button {
     color: #fff;
@@ -63,6 +46,30 @@ nav>button:hover {
 }
 nav>button:active {
     background-color: #ffffff28;
+}
+.container-clock-calendar {
+display: flex;
+flex-direction: row;
+align-items: end;
+margin: 20px 0 20px 0;
+}
+.clock {
+font-size: 42px;
+text-shadow: 1px 3px 5px #141414;
+}
+
+.wd-dd-mm {
+display:flex;
+flex-direction: row;
+margin: 2px;
+font-size: 18px;
+text-shadow: 1px 3px 5px #141414;
+}
+.container-tabs {
+    display: flex;
+    max-width: 1000px;
+    align-content: center;
+    justify-content: center;
 }
 div#week-day {
 text-transform: Captalize;
@@ -100,12 +107,6 @@ div.tabbed {
     border-radius: 0.8em 0.8em 0.8em 0.8em;
 }
 
-nav.tabs {
-    font-size: 15px;
-    margin: 20px 0 0 0;
-    display: block;
-    align-self: flex-start;	    
-}
 /*
 div.tab:target {
     display: block;
@@ -115,6 +116,7 @@ div.tab {
 } */
 
 ul {
+    width: auto;
     background-color: rgba(255, 255, 255, 0.150 );
     border-radius: 0.8em 0.8em 0 0;
     border: 1px solid rgba(246, 255, 229, 0.493);
@@ -159,7 +161,6 @@ h1 {
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin-bottom: 20px;
     }
     footer {
         display: flex;   
@@ -203,7 +204,7 @@ h1 {
         align-items: center;
         justify-content: center;
         padding: 0;
-	  Background-color: #0000000f;
+        Background-color: #0000000f;
     }
     .section-boxes a { 
         color: rgb(255, 255, 255);
@@ -246,19 +247,19 @@ font-size: 15px;
 div.container-simulators{
 	margin-top: 70px;
     padding: 20px 50px 20px 50px;
-    	border-top-left-radius: 5rem;
-   	border-top-right-radius: 5rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color:#ffffffd4;
-        align-items: center;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color:#ffffffd4;
+    align-items: center;
 	max-width: 1000px;
 	color: #000;
 	flex-direction: column;
 	backdrop-filter: blur(30px);
     }
-   
+
     .contain-simulator {
 	color:#000;
         display: block;
@@ -304,7 +305,6 @@ div.container-simulators{
     button {
         font-size: 11pt;
         font-weight: 600;
-        height: 50px;
         width: 60px;
         padding: 8px 10px 8px 10px; 
         margin: 2px;
@@ -323,6 +323,7 @@ div.container-simulators{
         background-color: rgb(63, 132, 196);
 	background-image: linear-gradient(to bottom,#08c,#04c);
 	opacity: .8;
+    height: 40px;
     }
    
     button#calcular:hover {
@@ -336,3 +337,27 @@ div.container-simulators{
         text-align: center;
         color: #105cbe
     }
+
+    .btn-acess {
+        height: 40px;
+        margin-right: 10px;
+        border: none;
+        padding: 0 10px 42px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+        color:#000;
+    }
+    h1 {
+        text-shadow: none;
+    }
+    .btn-acess:hover {
+        background-color: #837575;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-acess.active {
+        background-color: #837575;
+        color: white;
+        border-radius: 5px;}
