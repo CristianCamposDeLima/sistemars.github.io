@@ -6,16 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SISTEMA RS - Servidores</title>
     <link rel="stylesheet" href="styles/main.css">
-    
-    <script defer src="scripts/clock.js"></script>
-    <script defer src="scripts/dragging.js"></script>
-    <script defer src="scripts/calculator-ipe.js"></script>
 
 </head>
 <body>
     <a target="_blank" href="https://estado.rs.gov.br/inicial">
         <img draggable="false" src="assets/icons/brasao_gov_rs.png" alt="" style="width: 260px; background-color: rgba(255, 255, 255, 0.308); border-radius: 0.8em; padding-right: 3px;">
     </a>
+    <nav class="tabs">
+      <button class="btn-acess" data-link="servidores.html" onclick="window.location.href='servidores.html'">
+          <h1>Área dos servidores</h1>
+      </button>
+      <button class="btn-acess" data-link="index.html" onclick="window.location.href='index.html'">
+          <h1>ACESSO RÁPIDO - SISTEMAS</h1>
+      </button>
+      <button class="btn-acess" data-link="estagiarios.html" onclick="window.location.href='estagiarios.html'">
+          <h1>Área dos estagiários</h1>
+      </button>
+  </nav>
+  <!-- <script>
+    const currentPage = window.location.pathname.split('/').pop();
+    const buttons = document.querySelectorAll('.btn-acess');
+
+    buttons.forEach(btn => {
+        if (btn.dataset.link === currentPage) {
+            btn.classList.add('active');
+        }
+    }); -->
+</script>
 <div class="container-clock-calendar">
 <div class="clock" id="clock">Hora</div>
 <div class="wd-dd-mm">
@@ -26,17 +43,6 @@
 </div>
 <div class="tabbed">
     <div class="container-tabs">
-        <nav class="tabs">
-            <button class="btn-acess" onclick="window.location.href='servidores.html'">
-                <h1>Área dos servidores</h1>
-            </button>
-            <button class="btn-acess" onclick="window.location.href='index.html'">
-                <h1>ACESSO RÁPIDO - SISTEMAS</h1>
-            </button>
-            <button class="btn-acess" onclick="window.location.href='estagiarios.html'">
-                <h1>Área dos estagiários</h1>
-            </button>
-        </nav>   
     </div>
         <div class="tab" id="acesso-rapido"> 
             <section class="section-boxes">
@@ -103,7 +109,7 @@
                     <li>Dados funcionais</li>
                   <li>Férias, licenças e histórico funcional</li>
                   <li>Declaração de rendimentos para Imposto de Renda</li>
-                  <p><strong>Como acessar:</strong> Identificação Funcional e senha.</p>
+                  <p><strong>Como acessar:</strong> Identificação Funcional e senha. (<a href="https://www.gov.br/" target="_blank">gov.br</a>)</p>
                 </ul>
               </div>
             </div>
@@ -164,7 +170,7 @@
                 <li>Mantenha seus dados atualizados no IF-RHE.</li>
                 <li>Use o ponto digital diariamente, conforme as orientações do seu setor.</li>
                 <li>Guarde seus acessos com segurança (CPF + senha Gov.br).</li>
-                <li>Em caso de dúvidas, entre em contato com o RH.</li>
+                <li>Em caso de dúvidas, entre em contato com o RH da sua secretaria.</li>
               </ul>
             </div>
             
@@ -207,7 +213,7 @@
             }
           
             .tab-btn.active {
-                background: #005aa7;
+                background: #837575;
                 color: white;
             }
           
@@ -272,7 +278,9 @@
 </div>
 </div>
 </section>
-	
+<script src="scripts/nav-active.js"> </script>
+<script src="scripts/clock.js"></script>
+<script src="scripts/calculator-ipe.js"></script>
 </body>
 <footer><a target="_blank" href="https://www.linkedin.com/in/cristian-campos-de-lima-76ba4a164/">Utilidade pública - Por: Cristian Lima</a></footer>
 </html>
