@@ -4,20 +4,20 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #000;
-    background-image: url("../assets/images/GIOGIO.jpg");
-   background-repeat: repeat;
+    background-image: url("../assets/images/caff2.png");
+   background-repeat: no-repeat;
     color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: Arial;
-/*     overflow: hidden;   desativa scroll
+    overflow: hidden;   desativa scroll;
 
     background-size: cover;
     background-position: center;
     padding: 10px 0 0 0 ;
-    background-attachment: fixed;*/
+    background-attachment: fixed;
 }
 nav  {
     width: 100%;
