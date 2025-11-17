@@ -12,12 +12,12 @@ body{
     padding: 0;
     margin: 0;
     font-family: Arial;
-/*     overflow: hidden;   desativa scroll*/
+/*     overflow: hidden;   desativa scroll
 
     background-size: cover;
     background-position: center;
     padding: 10px 0 0 0 ;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 nav  {
     width: 100%;
